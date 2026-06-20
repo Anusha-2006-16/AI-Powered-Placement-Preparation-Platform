@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h2>Interview Evaluation</h2>
+<p>
+  Score:
+  <span th:text="${result.score}">
+  </span>
+    /10
+</p>
+<p>
+  Feedback:
+</p>
+<p th:text="${result.feedback}"></p>
+
+<a th:href="@{/auth/dashboard}">
+  Dashboard
+</a>
+</body>
+</html>

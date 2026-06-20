@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+<h1>
+    Welcome,
+    <span th:text="${user.name}"></span>
+</h1>
+
+<hr>
+
+<a th:href="@{/auth/logout}">
+    Logout
+</a>
+
+<hr>
+
+<p>
+    Total Resumes:
+    <span th:text="${dashboard.totalResumes}"></span>
+</p>
+
+<p>
+    Latest ATS Score:
+    <span th:text="${dashboard.latestScore}"></span>
+</p>
+<hr>
+<h3>Latest Feedback</h3>
+<p th:text="${dashboard.latestFeedback}"></p>
+<h3>Missing Skills</h3>
+<p th:text="${dashboard.latestMissingSkills}"></p>
+<hr>
+
+<a th:href="@{/test/start}">
+    Start Mock Test
+</a>
+
+<hr>
+
+<a th:href="@{/test/history}">
+    Test History
+</a>
+
+<hr>
+
+<a th:href="@{/resume/upload}">
+    Upload Resume
+</a>
+
+<br>
+
+<a th:href="@{/resume/my}">
+    My Resumes
+</a>
+<a th:href="@{/resume/analytics}">
+    View Analytics
+</a>
+</body>
+</html>

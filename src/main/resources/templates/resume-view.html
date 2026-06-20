@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${resume.fileName}"></h1>
+<a th:href="@{/resume/my}">Back</a>
+<hr>
+<a th:href="@{/resume/analyze/{id}(id=${resume.id})}">
+    Analyze Resume
+</a>
+
+<hr>
+<a th:href="@{/resume/questions/generate/{id}(id=${resume.id})}">
+    Generate Interview Questions
+</a>
+<hr>
+<pre th:text="${resume.extractedText}"></pre>
+</body>
+</html>

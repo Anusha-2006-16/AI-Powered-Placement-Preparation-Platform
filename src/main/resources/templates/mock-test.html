@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mock Test</title>
+</head>
+<body>
+  <h1>Mock Test</h1>
+  <form th:action="@{/test/submit}" th:method="post">
+    <div th:each="question:${questions}">
+      <h3 th:text="${question.questionText}"></h3>
+      <input type="radio" th:name="'q'+${question.id}" th:value="A">
+      <span th:text="${question.optionA}"></span>
+      <br>
+      <input type="radio" th:name="'q'+${question.id}" th:value="B">
+      <span th:text="${question.optionB}"></span>
+      <br>
+      <input type="radio" th:name="'q'+${question.id}" th:value="C">
+      <span th:text="${question.optionC}"></span>
+      <br>
+      <input type="radio" th:name="'q'+${question.id}" th:value="D">
+      <span th:text="${question.optionD}"></span>
+
+    </div>
+    <button type="submit">Submit Test</button>
+  </form>
+</body>
+</html>

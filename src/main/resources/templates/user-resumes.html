@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Resumes</title>
+</head>
+
+<body>
+
+<h1>
+    Hey,
+    <span th:text="${user.name}"></span>
+    ! Your Resumes Here...
+</h1>
+
+<a th:href="@{/auth/dashboard}">
+    Back to Dashboard
+</a>
+
+<br><br>
+
+<div th:each="resume : ${resumes}">
+
+    <a th:href="@{/resume/text/{id}(id=${resume.id})}">
+        <span th:text="${resume.fileName}"></span>
+    </a>
+    <br><br>
+    <a th:href="@{/resume/analyze/{id}(id=${resume.id})}">
+        Analyze Resume
+    </a>
+    <br><br>
+    <a th:href="@{/resume/analysis/{id}(id=${resume.id})}">
+        View Analysis
+    </a>
+    <br><br>
+    <a th:href="@{/resume/questions/generate/{id}(id=${resume.id})}">
+        Generate Interview Questions
+    </a>
+<hr>
+</div>
+
+</body>
+</html>

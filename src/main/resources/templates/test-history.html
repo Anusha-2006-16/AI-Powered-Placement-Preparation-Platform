@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test History</title>
+</head>
+<body>
+    <h1>Test Performance</h1>
+    <hr>
+    <p>Total Tests Taken : <span th:text="${totalTests}"></span></p>
+    <p>Highest Score : <span th:text="${highestScore}"></span></p>
+    <p>Average Score : <span th:text="${avgScore}"></span></p>
+    <p>Latest Score : <span th:text="${latestScore}"></span></p>
+    <hr>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Score</th>
+        </tr>
+        <tr th:each="result:${results}">
+            <td th:text="${#temporals.format(result.testDate, 'dd MMM yyyy, hh:mm a')}"></td>
+<!--            <td th:text="${result.testDate}"></td>-->
+            <td th:text="${result.score}"></td>
+        </tr>
+    </table>
+<a th:href="@{/auth/dashboard}">Dashboard</a>
+</body>
+</html>

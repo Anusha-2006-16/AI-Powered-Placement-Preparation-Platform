@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Result</title>
+</head>
+<body>
+    <h1>Test Submitted Successfully</h1>
+    <h2>
+      Score:
+      <span th:text="${score}"></span>/
+      <span th:text="${total}"></span>
+    </h2>
+<a th:href="@{/auth/dashboard}">Back To Dashboard</a>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analysis</title>
+</head>
+
+<body>
+
+<h1>Resume Analysis</h1>
+
+<hr>
+
+<p>
+    Resume:
+    <span th:text="${resume.fileName}"></span>
+</p>
+
+<p>
+    ATS Score:
+    <span th:text="${resume.atsScore ?: 'Not Analyzed'}"></span>
+</p>
+
+<h3>Missing Skills</h3>
+
+<pre th:text="${resume.missingSkills}"></pre>
+
+<h3>AI Feedback</h3>
+
+<pre th:text="${resume.latestFeedback}"></pre>
+
+<hr>
+
+<a th:href="@{/resume/my}">
+    Back To My Resumes
+</a>
+
+</body>
+</html>
