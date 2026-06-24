@@ -6,6 +6,7 @@
 </head>
 <body>
   <h1>Mock Test</h1>
+  <a th:href="@{/auth/dashboard}">Back to dashboard</a>
   <form th:action="@{/test/submit}" th:method="post">
     <div th:each="question:${questions}">
       <h3 th:text="${question.questionText}"></h3>

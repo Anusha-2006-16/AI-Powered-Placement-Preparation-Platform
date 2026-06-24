@@ -32,7 +32,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/", "/auth/login","/auth/register")
                         .permitAll()
-                        .requestMatchers("/test-ai", "/resume/test-ai")
+                        .requestMatchers("/test-ai", "/resume/test-ai","/skills/**")
                         .permitAll()
                         .anyRequest()
                         .authenticated()

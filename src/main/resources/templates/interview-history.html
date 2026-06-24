@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Interview History</title>
+</head>
+<body>
+    <h2>Mock Interview History</h2>
+    <a th:href="@{/auth/dashboard}">Back to dashboard</a>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Score</th>
+            <th>Percentage</th>
+        </tr>
+        <tr th:each="r:${results}">
+            <td th:text="${r.takenAt}"></td>
+            <td th:text="${r.totalScore}"></td>
+            <td th:text="${r.percentage} + '%'"></td>
+        </tr>
+    </table>
+</body>
+</html>

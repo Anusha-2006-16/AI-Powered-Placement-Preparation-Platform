@@ -24,4 +24,5 @@ public class InterviewQuestionService {
     public List<InterviewQuestion> getQuestions(Resume resume) {
         return interviewQuestionRepository.findByResume(resume);
     }
+
 }

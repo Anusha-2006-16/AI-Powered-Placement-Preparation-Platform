@@ -136,8 +136,13 @@ public class GeminiService {
     public List<String> generateQuestions(String resumeText) {
 
         String prompt = """
-            Based on this resume generate EXACTLY 10 interview questions.
-
+            Based on this resume generate EXACTLY 10 interview questions not more than 10.
+                Rules:
+                - Return only questions.
+                - One question per line.
+                - Do not provide answers.
+                - Do not provide numbering.
+                - Return exactly 10 questions.
             Mix:
             - Technical Questions
             - Project Based Questions
@@ -155,7 +160,7 @@ public class GeminiService {
         String result = callGemini(prompt);
 
         if (result.startsWith("Gemini service unavailable")) {
-            return List.of("Unable to generate questions currently.");
+            return List.of();
         }
 
         return Arrays.stream(result.split("\\n"))

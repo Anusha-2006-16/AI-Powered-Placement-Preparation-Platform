@@ -63,20 +63,20 @@ public class AuthController {
         return "redirect:/auth/dashboard";
     }
 
-   @GetMapping("/dashboard")
-    public String dashboard(Model model,HttpSession session){
-        String token=(String) session.getAttribute("jwt");
-        if(token == null){
-            return "redirect:/auth/login";
-        }
-        String email=jwtUtil.extractEmail(token);
-        User user=userService.getUserByEmail(email);
-        model.addAttribute("user",user);
-
-       DashboardDTO dashboard=userService.getDashboard(email);
-       model.addAttribute("dashboard",dashboard);
-        return "dashboard";
-   }
+//   @GetMapping("/dashboard")
+//    public String dashboard(Model model,HttpSession session){
+//        String token=(String) session.getAttribute("jwt");
+//        if(token == null){
+//            return "redirect:/auth/login";
+//        }
+//        String email=jwtUtil.extractEmail(token);
+//        User user=userService.getUserByEmail(email);
+//        model.addAttribute("user",user);
+//
+//       DashboardDTO dashboard=userService.getDashboard(email);
+//       model.addAttribute("dashboard",dashboard);
+//        return "dashboard";
+//   }
 
 
 

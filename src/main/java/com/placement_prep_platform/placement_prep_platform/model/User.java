@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(exclude={"resumes","testResults"})
+//@ToString(exclude={"resumes","testResults"})
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,4 +29,7 @@ public class User {
     @OneToMany(mappedBy = "user")
     @JsonIgnore
     private List<TestResult> testResults;
+    @OneToMany(mappedBy = "user")
+    @ToString.Exclude
+    private List<SkillGap> skillGaps;
 }
