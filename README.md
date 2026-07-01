@@ -130,8 +130,7 @@ The dashboard provides a centralized view of the user's progress, including:
 * Progress tracking
 * AI-driven recommendations
 
-The platform acts as an intelligent career preparation assistant, helping students understand where they stand, what skills they need to learn, and how to prepare effectively for placements and internships.
->>>>>>> 79bd57f10c51ea0a3dd0e728803604cde07cadf5
+The platform acts as an intelligent career preparation assistant, helping students understand where they stand, what skills they need to learn, and how to prepare effectively for placements and internships. 
 
 
 ## AI FLOW
