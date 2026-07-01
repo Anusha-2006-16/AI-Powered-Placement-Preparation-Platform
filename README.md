@@ -132,3 +132,124 @@ The dashboard provides a centralized view of the user's progress, including:
 
 The platform acts as an intelligent career preparation assistant, helping students understand where they stand, what skills they need to learn, and how to prepare effectively for placements and internships.
 >>>>>>> 79bd57f10c51ea0a3dd0e728803604cde07cadf5
+
+
+## AI FLOW
+Controller
+
+↓
+
+Service
+
+↓
+
+GeminiService
+
+↓
+
+Prompt
+
+↓
+
+Gemini API
+
+↓
+
+Response
+
+↓
+
+Parse Response
+
+↓
+
+Return Java Object
+
+↓
+
+Save Database
+
+↓
+
+Display HTML
+
+
+## MY prOJeCt STRUCTURE
+
+Browser
+
+↓
+
+HTML (Thymeleaf)
+
+↓
+
+Controller
+
+↓
+
+Service
+
+↓
+
+Repository
+
+↓
+
+Database
+
+↓
+
+Service
+
+↓
+
+Controller
+
+↓
+
+HTML
+
+↓
+
+Browser
+
+## Overall Workflow
+Login
+   │
+Dashboard
+   │
+Upload Resume
+   │
+Extract PDF Text
+   │
+Analyze Resume (Gemini)
+   │
+Save ATS Score
+   │
+Generate Questions (Gemini)
+   │
+Save Questions
+   │
+Take Mock Interview
+   │
+Submit Answers
+   │
+Evaluate Interview (Gemini)
+   │
+Show Report
+   │
+Update Analytics
+
+## CONCEPTS USED
+Spring Boot MVC (Controllers, Services, Repositories)
+Spring Data JPA
+MySQL
+JWT Authentication
+File Upload
+PDF Text Extraction
+External API Integration (Gemini)
+Thymeleaf
+Chart.js
+Basic Analytics
+Entity Relationships
